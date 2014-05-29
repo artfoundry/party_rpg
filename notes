@@ -1,0 +1,50 @@
+data structures:
+     map - 2D array of hashes
+         - each hash contains:
+           -Boolean for on/off path
+           -Int indicating tile type (where the walls are)
+           -Int indicating the tile file name (ie if there are multiple skins or exit types for each tile type)
+           -Int indicating any item in the space
+           -Int indicating any character in the space
+           -Int indicating any decoration in the space
+     matrix of tile types - 2D array
+         - Each cell of main array contains tile type
+         - Each subarray lists the tile types that can work with that tile
+     character data - hash containing:
+         - class
+         - gender(?)
+         - str
+         - dex
+         - spirit
+         - hp
+         - sp
+         - attack
+         - defense
+         - skill 1 level
+         - skill 2 level
+         - skill 3 level
+         - inventory array
+     item data - hash containing:
+         - type
+         - name
+         - stat
+         - sell cost
+         - buy cost
+         - special attr
+     monster data - hash containing:
+         - class
+         - str
+         - dex
+         - spirit
+         - hp
+         - sp
+         - attack
+         - defense
+         - skill level
+         - inventory array
+
+ dungeon map randomization:
+     1) Use a tree search algorithm to inspect each cell for non-walls.
+     2) Upon finding one, place random tile in adjacent cell and repeat with newly placed cell.
+     3) Once a dead end is reached return to previous branch.
+     4) Track path by noting whether a cell is part of the path.
