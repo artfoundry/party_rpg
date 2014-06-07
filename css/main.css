@@ -93,21 +93,32 @@ textarea {
     padding: 0.2em 0;
 }
 
+
+
+
+
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
-
-
-
-
-
-
-
-
-
-
-
+.tile {
+    display: inline-block;
+    background-color: black;
+    color: red;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 2px;
+    width: 2em;
+    height: 2em;
+    padding: 3px;
+}
+.tile.tile-current {
+    background-color: yellow;
+}
+.tile.tile-visited {
+    background-color: gray;
+}
 
 
 
