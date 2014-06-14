@@ -45,6 +45,8 @@ data structures:
 
  dungeon map randomization:
      1) Use a tree search algorithm to inspect each cell for non-walls.
-     2) Upon finding one, place random tile in adjacent cell and repeat with newly placed cell.
+     2) Upon finding one, place random tile walls in adjacent cell and repeat with newly placed cell.
+        - walls either match adjacent tile walls or are wall when no adjacent tile
      3) Once a dead end is reached return to previous branch.
      4) Track path by noting whether a cell is part of the path.
+ - visual tile is made up of wall images with one large floor image for all tiles (and individual floor tiles for unique rooms)

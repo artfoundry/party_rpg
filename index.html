@@ -18,8 +18,8 @@
         <script src="js/main.js"></script>
     </head>
     <body ng-controller="RogueController">
-        <div ng-repeat="row in tileNum">
-            <div class="tile" ng-repeat="item in row" ng-click="handleClick($event)"> {{item}} </div>
+        <div ng-repeat="row in mapData">
+            <div class="tile" ng-repeat="item in row" ng-click="handleClick($event)"> {{item["tileNum"]}} </div>
         </div>
 
 
