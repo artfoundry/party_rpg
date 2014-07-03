@@ -1,0 +1,32 @@
+Node consists of pointer to hash from mapData
+Stack array lists nodes visited.  Each time new node is visited/added,
+it's pushed to the stack.  Each time previous node is visited, end node is popped.
+
+Look up node in tree (tileNum, pointer)
+    Loop through each cell in node's array
+        If tileNum in node matches tileNum passed in
+            Return Pointer
+        Else if cell in array points to another node
+            Set pointer to that node
+            Look up node in tree (pointer)
+
+Get next node on path (pointer, edge)
+    Using pointer to current node (either global or sent by call), find array cell corresponding to edge passed in
+    Set pointer to node pointed to by that cell
+    Push node to stack
+    Return pointer
+
+Get previous node in path (pointer)
+    Pop node from stack
+    Return last node in stack
+
+
+Add node (tile) to path (tile object, pointer, edge)
+    Using pointer to current node (either global or sent by call), find array cell corresponding to edge passed in (where the node needs to attach)
+    Set array cell equal to a new node using tile object
+    Push node to stack
+    Set new pointer to new node
+    Access cell in new node's array that corresponds to opposite edge of previous tile (if edge was 1, opp edge is 3, etc.)
+    Set that cell to node pointed to by pointer
+    Return new pointer
+

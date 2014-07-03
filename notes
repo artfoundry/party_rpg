@@ -1,12 +1,15 @@
 data structures:
-     map - 2D array of hashes
-         - each hash contains:
+     "mapData" - 2D array of hashes
+         - each hash represents a tile and contains:
+           -"tileNum" integer for the number of tile (internal use)
+           -"edges" array with four objects containing edgeType (number) and adjTile (tile object from mapData)
+           -"path" array of tile objects from mapData, in order of pathing, starting from start tile
            -Boolean for on/off path
-           -Int indicating tile type (where the walls are)
            -Int indicating the tile file name (ie if there are multiple skins or exit types for each tile type)
            -Int indicating any item in the space
            -Int indicating any character in the space
            -Int indicating any decoration in the space
+     "pathData" - array of 4 cells containing either "wall" or an object containing an adjacent tile hash object from mapData and another array in the path
      matrix of tile types - 2D array
          - Each cell of main array contains tile type
          - Each subarray lists the tile types that can work with that tile
