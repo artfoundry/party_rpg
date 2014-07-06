@@ -1,5 +1,5 @@
 data structures:
-     "mapData" - 2D array of hashes
+     "mapData" - 2D array of hashes (first array is rows, each subarray is columns)
          - each hash represents a tile and contains:
            -"tileNum" integer for the number of tile (internal use)
            -"edges" array with four objects containing edgeType (number) and adjTile (tile object from mapData)

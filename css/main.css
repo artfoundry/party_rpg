@@ -103,24 +103,24 @@ textarea {
 
 .tile {
     display: inline-block;
+    position: relative;
     background-color: black;
     color: red;
     border-width: 1px;
     border-style: solid;
     border-color: black;
     border-radius: 2px;
-    width: 2em;
-    height: 2em;
+    width: 4em;
+    height: 4em;
     padding: 3px;
 }
-.tile.tile-current {
-    background-color: yellow;
-}
-.tile.tile-visited {
-    background-color: gray;
-}
-
-
+.tile.tile-current { background-color: yellow; }
+.tile.tile-visited { background-color: gray; }
+/*.edge { background-color: blue; display: inline-block; position: absolute; }*/
+/*.edge.edge-top { width: .5em; height: 4em; top: 0; }*/
+/*.edge.edge-right { width: 4em; height: .5em; right: 0; }*/
+/*.edge.edge-bottom { width: 4em; height: .5em; bottom: 0; }*/
+/*.edge.edge-left { width: 4em; height: .5em; left: 0; }*/
 
 
 
