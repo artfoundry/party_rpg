@@ -104,21 +104,15 @@ textarea {
 .tile {
     display: inline-block;
     background-color: black;
-    color: red;
-    border-width: 1px;
-    border-style: solid;
-    border-color: black;
-    border-radius: 2px;
-    width: 2em;
-    height: 2em;
-    padding: 3px;
+    background-image: url("../images/tile.jpg");
+    color: gray;
+    width: 50px;
+    height: 50px;
+    transition: background-image .3s ease-in-out;
 }
-.tile.tile-current {
-    background-color: yellow;
-}
-.tile.tile-visited {
-    background-color: gray;
-}
+.tile.tile-option:hover { background-image: url("../images/tile_feet.jpg"); }
+.tile.tile-current { background-image: url("../images/tile_hero.jpg"); }
+.tile.tile-visited { background-image: url("../images/tile_feet.jpg"); }
 
 
 

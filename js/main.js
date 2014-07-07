@@ -43,9 +43,19 @@ angular.module("rogueCraft.movePlayer", []).value("player", {
                 break;
             default: return;
         }
+        this.markTile();
     },
     changeTile: function($event){
-        $(".tile-current").removeClass("tile-current").addClass("tile-visited");
+        var $currentTile = $(".tile-current");
+        var tileDown = parseInt($currentTile.text(), 10) + 10;
+        var tileUp = parseInt($currentTile.text(), 10) - 10;
+        var tileLeft = parseInt($currentTile.text(), 10) - 1;
+        var tileRight = parseInt($currentTile.text(), 10) + 1;
+        $(".tile:contains('" + tileDown + "')").removeClass("tile-option");
+        $(".tile:contains('" + tileUp + "')").removeClass("tile-option");
+        $(".tile:contains('" + tileLeft + "')").removeClass("tile-option");
+        $(".tile:contains('" + tileRight + "')").removeClass("tile-option");
+        $currentTile.removeClass("tile-current").addClass("tile-visited");
         $($event.target).attr("class", "tile tile-current");
     },
     start: function() {
@@ -53,6 +63,17 @@ angular.module("rogueCraft.movePlayer", []).value("player", {
         $(function () {
             $(".tile:contains(' " + startTile + " ')").addClass("tile-current");
         });
+    },
+    markTile: function(){
+        var $currentTile = $(".tile-current");
+        var tileDown = parseInt($currentTile.text(), 10) + 10;
+        var tileUp = parseInt($currentTile.text(), 10) - 10;
+        var tileLeft = parseInt($currentTile.text(), 10) - 1;
+        var tileRight = parseInt($currentTile.text(), 10) + 1;
+        $(".tile:contains('" + tileDown + "')").addClass("tile-option");
+        $(".tile:contains('" + tileUp + "')").addClass("tile-option");
+        $(".tile:contains('" + tileLeft + "')").addClass("tile-option");
+        $(".tile:contains('" + tileRight + "')").addClass("tile-option");
     }
 });
 
