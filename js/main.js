@@ -32,7 +32,7 @@ angular.module("rogueCraft.moveMonster", []).value("monster", {
         nextTile[3] = parseInt($monsterTile.text(), 10) + 1;
         if (monsterTileVal <= 10) { nextTile[1] = nextTile[0]; }
         else if (monsterTileVal >= 91) { nextTile[0] = nextTile[1]; }
-        else if (monsterTileVal % 10 === 0) { nextTile[3] = nextTile[2]; }
+        if (monsterTileVal % 10 === 0) { nextTile[3] = nextTile[2]; }
         else if (monsterTileVal % 10 === 1) { nextTile[2] = nextTile[3]; }
         this.changeTile(nextTile[choice]);
     },
