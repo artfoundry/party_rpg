@@ -95,6 +95,7 @@ angular.module("rogueCraft.createLevel", []).value("level", {
 var rogueCraft = angular.module("rogue-craft", ["rogueCraft.createLevel", "rogueCraft.movePlayer"]).run(function(level, player){
     level.create();
     player.start();
+    $(function() { player.markTile(); });
 });
 
 rogueCraft.controller("RogueController", function($scope, player, level){

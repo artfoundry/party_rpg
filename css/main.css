@@ -110,7 +110,7 @@ textarea {
     height: 50px;
     transition: background-image .3s ease-in-out;
 }
-.tile.tile-option:hover { background-image: url("../images/tile_feet.jpg"); }
+.tile.tile-option:hover { background-image: url("../images/tile_feet_gray.jpg"); }
 .tile.tile-current { background-image: url("../images/tile_hero.jpg"); }
 .tile.tile-visited { background-image: url("../images/tile_feet.jpg"); }
 
