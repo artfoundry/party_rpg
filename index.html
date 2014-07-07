@@ -18,6 +18,9 @@
         <script src="js/main.js"></script>
     </head>
     <body ng-controller="RogueController">
+        <div class="score">
+            <div ng-model="player.score">Your score is: {{player.score}}</div>
+        </div>
         <div class="board">
             <div ng-repeat="row in tileNum">
                 <div class="tile" ng-repeat="item in row" ng-click="handleClick($event)"> {{item}} </div>

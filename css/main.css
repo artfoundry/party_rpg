@@ -116,10 +116,12 @@ textarea {
     padding-bottom: 10%;
     transition: background-image .3s ease-in-out;
 }
-.tile.tile-option:hover { background-image: url("../images/tile_feet_gray.jpg"); }
 .tile.tile-current { background-image: url("../images/tile_hero.jpg"); }
 .tile.tile-visited { background-image: url("../images/tile_feet.jpg"); }
-
+.tile.tile-monster { background-image: url("../images/tile_monster.jpg"); }
+.tile.tile-splat { background-image: url("../images/tile_splat.jpg"); }
+.tile.tile-option:hover { background-image: url("../images/tile_feet_gray.jpg"); }
+.tile.tile-sword:hover { background-image: url("../images/tile_sword.jpg"); }
 
 
 
