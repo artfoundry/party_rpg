@@ -102,7 +102,6 @@ textarea {
    ========================================================================== */
 
 .board { white-space: nowrap; }
-
 .tile {
     display: inline-block;
     background-color: black;
@@ -122,7 +121,8 @@ textarea {
 .tile.tile-splat { background-image: url("../images/tile_splat.jpg"); }
 .tile.tile-option:hover { background-image: url("../images/tile_feet_gray.jpg"); }
 .tile.tile-sword:hover { background-image: url("../images/tile_sword.jpg"); }
-
+.score {background-color: #55CC55; border-width: 1px; border-radius: 4px 4px 0 0; border-style: solid; border-color: black;
+    text-align: center;}
 
 
 

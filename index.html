@@ -19,7 +19,8 @@
     </head>
     <body ng-controller="RogueController">
         <div class="score">
-            <div ng-model="player.score">Your score is: {{player.score}}</div>
+            <strong>Chase the monsters down and splat them, but don't let them eat you!</strong>
+            <div ng-model="player.score">You've splatted {{player.score}} monsters!</div>
         </div>
         <div class="board">
             <div ng-repeat="row in tileNum">
