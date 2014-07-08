@@ -101,7 +101,8 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-.board { white-space: nowrap; }
+.board { white-space: nowrap; max-width: 35em; }
+.row { height: 0; padding-bottom: 10%; }
 .tile {
     display: inline-block;
     background-color: black;
@@ -121,8 +122,15 @@ textarea {
 .tile.tile-splat { background-image: url("../images/tile_splat.jpg"); }
 .tile.tile-option:hover { background-image: url("../images/tile_feet_gray.jpg"); }
 .tile.tile-sword:hover { background-image: url("../images/tile_sword.jpg"); }
-.score {background-color: #55CC55; border-width: 1px; border-radius: 4px 4px 0 0; border-style: solid; border-color: black;
-    text-align: center;}
+.score {
+    background-color: #55CC55;
+    border-width: 1px;
+    border-radius: 4px 4px 0 0;
+    border-style: solid;
+    border-color: black;
+    text-align: center;
+    max-width: 34.9em;
+}
 
 
 
